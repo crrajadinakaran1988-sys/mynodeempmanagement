@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  .card
+    h1 Expense List
+
+    table.table
+      tr
+        th Employee Id
+        th Employee Name
+        th Designation
+        th Email_id
+        th Contact_no
+        th Department
+        th Date of Joining
+        th Location
+
+      each exp in expenses
+        tr
+          td #{exp.Emp_Id}
+          td #{exp.Emp_name}
+          td #{exp.Designation}
+          td #{exp.Email_id}
+          td #{exp.Contact_no}
+          td #{exp.Dept}
+          td #{exp.DOJ}
+          td #{exp.Location}
+          td
+            a.delete-btn(href=`/delete/${exp.Emp_Id}` data-cy="delete") Delete |
+            a(href=`/edit/${exp.Emp_Id}` data-cy="edit") Edit 
+
+    br
+    a(href="/" data-cy="add-expense") Add New Expense |
+    a(href="/logout" data-cy="logout") Logout

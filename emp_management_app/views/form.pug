@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+    .card 
+        h1 Add New Expense
+
+        form(action="/expenses" method="POST")
+            input(type="text" name="Emp_name" placeholder="Employee Name")
+            input(type="text" name="Designation" placeholder="Designation")
+            input(type="text" name="Email_id" placeholder="Email_id")
+            input(type="number" name="Contact_no" placeholder="Contact_no")
+            input(type="text" name="Dept" placeholder="Department")
+            input(type="date" name="DOJ" placeholder="Date of Joining")
+            input(type="text" name="Location" placeholder="Location")
+            button(type="submit" data-cy="save-expense") Add Expense
+
+            a(href="/expenses" data-cy="view-expenses") View All Expenses   
