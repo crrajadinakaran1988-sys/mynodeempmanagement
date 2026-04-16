@@ -4,14 +4,14 @@ block content
   .card
     h1 Edit Expense
 
-    form(action=`/edit/${expense.id}` method="POST")
+    form(action=`/edit/${expense.Emp_id}` method="POST")
       input(type="text" name="Emp_Id" value=expense.Emp_Id)
       input(type="text" name="Emp_name" value=expense.Emp_name)
       input(type="text" name="Designation" value=expense.Designation)
       input(type="text" name="Email_id" value=expense.Email_id)
       input(type="number" name="Contact_no" value=expense.Contact_no)
       input(type="text" name="Dept" value=expense.Dept)
-      input(type="date" name="DOJ" value=expense.DOJ)
+      input(type="text" name="DOJ" value=expense.DOJ)
       input(type="text" name="Location" value=expense.Location)
       button(type="submit" data-cy="save-expense") Update
     a(href="/expenses") Back

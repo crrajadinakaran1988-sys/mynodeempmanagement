@@ -1,6 +1,8 @@
 Create Database Employee_db;
 use Employee_db;
 
+drop table Employee;
+
 Create table Employee
 (
 Emp_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -9,7 +11,7 @@ Emp_Designation varchar(100),
 Emp_email_id varchar(100), 
 Emp_Cnt_no INT, 
 Emp_Dept varchar(100), 
-Emp_DOJ DATE, 
+Emp_DOJ varchar(100),
 Emp_Location varchar(100)
 )
 
